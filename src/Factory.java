@@ -1,41 +1,55 @@
 public class Factory {
-    // Instance variables (they are made at the very top of the class and the word public before them and they can be used everywhere inside factory)
+    //instance variables they are at the top of the class and they have the word public before them
     public int yearFounded;
     public boolean isOpen;
-    //Double is any number with decimals
+    // A double is a number in decimal points
     public double earnings;
-    //String is anything that can be put inside two quotes(can be sentences or words)
+
+    // A string is the text inside quotes
     public String products;
 
+    // This is a constructor a type of method that doesn't use void and have same name as class
+    public Factory() {
+        System.out.println("we make houses");
+        yearFounded = 2025;
+        isOpen = false;
+        products = "houses";
+        factoryInfo();
+        //type varName= value;
+        //object of type house
+        House h1= new House();
+        h1.owner = "Mr.Kim";
+        System.out.println("the owner is" + h1.owner);
 
+        //Todo: is to give all the houses instance variables values
+        h1.size=200.25;
+        h1.walls = 4;
+        h1.isOccupied = true;
+        h1.owner = "cathy";
+        h1.address = "Milton Street 625";
+
+
+
+        //todo: change the variable year founded to be a different value
+        yearFounded = 2030; // I just changed the value to a different number
+        factoryInfo();
+    }
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Julia's factory");
-
-        new Factory();
+        Factory f = new Factory();
     }
 
-    //constructor is a special type of method that does not have void and the name of teh constructor matches the name of the clas
-    public Factory() {
-        System.out.println("we make houses!");
-        yearFounded=2025;
-        isOpen= false;
-        earnings=1.1;
-        factoryInfo();
-        
-
-
-
-
-    }
-    public void factoryInfo(){
-        System.out.println("the factory info");
-        //Printing the factory's instance variables
-        System.out.println(products);
-        System.out.println("the year founded");
-        System.out.println(yearFounded);
-        System.out.println("the earnings" +earnings);
-        System.out.println("it is" + isOpen + "that the factory is open");
-
+    // New method names factoryInfo
+    public void factoryInfo() {
+        System.out.println("this is factory info");
+        System.out.println("what we sell");
+        System.out.println("the earnings");
+        System.out.println("the year founded" + yearFounded);
     }
 }
+
+
+
+
+
+
