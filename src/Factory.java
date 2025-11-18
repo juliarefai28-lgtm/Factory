@@ -28,7 +28,17 @@ public class Factory {
         h1.owner = "cathy";
         h1.address = "Milton Street 625";
 
+        System.out.println(h1.size);
+        h1.size=40.2;
+        System.out.println(h1.size);
+        h1.printInfo();
 
+        //todo: make another house object called myHouse
+        House myHouse= new House();
+            myHouse.printInfo();
+
+            House customHouse = new House(200.24,8, "Ms Blare","260 center street", true);
+            customHouse.printInfo();
 
         //todo: change the variable year founded to be a different value
         yearFounded = 2030; // I just changed the value to a different number
