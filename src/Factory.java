@@ -20,6 +20,8 @@ public class Factory {
         House h1= new House();
         h1.owner = "Mr.Kim";
         System.out.println("the owner is" + h1.owner);
+        Bakery B1= new Bakery();
+        B1.printInfo();
 
         //Todo: is to give all the houses instance variables values
         h1.size=200.25;
