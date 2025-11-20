@@ -9,7 +9,7 @@ public class Factory {
     public String products;
 
     // This is a constructor a type of method that doesn't use void and have same name as class
-    public Factory() {
+    public Factory(int yearFounded, boolean isOpen, double earnings, String products) {
         System.out.println("we make houses");
         yearFounded = 2025;
         isOpen = false;
@@ -46,7 +46,7 @@ public class Factory {
     }
 
     public static void main(String[] args) {
-        Factory f = new Factory();
+        Factory f = new Factory(2020, false, 50.67, "houses");
     }
 
     // New method names factoryInfo
